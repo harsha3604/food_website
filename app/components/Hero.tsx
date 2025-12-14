@@ -21,7 +21,7 @@ export default function Hero() {
           your table, ensuring quality and taste in every bite.
         </p>
 
-        <button className="bg-green-600 hover:bg-green-700 transition px-6 py-3 rounded-md text-sm font-medium">
+        <button className="bg-[#87a96b] transition px-6 py-3 rounded-md text-sm font-medium">
           Explore our produce
         </button>
       </div>

@@ -3,9 +3,9 @@ import { Product } from "../types/product";
 export const products: Product[] = [
   {
     id: 1,
-    name: "Sithaphal(Custard Apple/Sugar Apple)",
+    name: "Custard Apple",
     unit: "lb",
-    price: 14.5,
+    price: 14.49,
     image: "/images/custard-apple.jpg",
     soldOut: true,
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     id: 8,
     name: "Farm Fresh Eggs",
     unit: "dozen",
-    price: 5.5,
+    price: 5.49,
     image: "/images/eggs.jpg",
   },
   {
@@ -69,7 +69,7 @@ export const products: Product[] = [
     id: 10,
     name: "Bilva Leaf",
     unit: "lb",
-    price: 0.5,
+    price: 0.49,
     image: "/images/bilva-leaf.webp",
   },
   {
@@ -125,7 +125,7 @@ export const products: Product[] = [
     id: 18,
     name: "Green Coconuts Premium Variety",
     unit: "per piece",
-    price: 3.5,
+    price: 3.49,
     image: "/images/coconuts.webp",
   },
   {
