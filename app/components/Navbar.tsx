@@ -1,5 +1,7 @@
 "use client";
+
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import logo from "@/public/images/logo.png";
 
@@ -16,16 +18,10 @@ export default function Navbar() {
   return (
     <header className="bg-white">
       <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col items-center gap-6">
-        {/* Logo + Brand */}
+        {/* Logo */}
         <div className="flex items-center gap-3">
-          <Image
-            src={logo}
-            alt="Sree Krithi Farms"
-            width={100}
-            height={100}
-            priority
-          />
-          <h1 className="text-4xl md:text-5xl font-serif text-[#87a96b] tracking-wide">
+          <Image src={logo} alt="Sree Krithi Farms" width={100} height={100} />
+          <h1 className="text-4xl md:text-5xl font-serif text-[#87a96b]">
             Sree Krithi Farms
           </h1>
         </div>
@@ -36,21 +32,22 @@ export default function Navbar() {
             const isActive = pathname === item.href;
 
             return (
-              <span
+              <Link
                 key={item.label}
-                className={`cursor-pointer px-5 py-2 rounded-md transition
-          ${
-            isActive
-              ? "bg-[#87a96b] text-[#ffffff]"
-              : "hover:text-[#ffffff] hover:bg-[#87a96b]"
-          }`}
+                href={item.href}
+                className={`px-5 py-2 rounded-md transition
+                  ${
+                    isActive
+                      ? "bg-[#87a96b] text-white"
+                      : "hover:bg-[#87a96b] hover:text-white"
+                  }`}
               >
                 {item.label}
-              </span>
+              </Link>
             );
           })}
 
-          {/* Cart placeholder */}
+          {/* Cart */}
           <span className="relative cursor-pointer">
             🛒
             <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full px-1">
