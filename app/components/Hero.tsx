@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section
@@ -21,9 +23,11 @@ export default function Hero() {
           your table, ensuring quality and taste in every bite.
         </p>
 
-        <button className="bg-[#87a96b] transition px-6 py-3 rounded-md text-sm font-medium">
-          Explore our produce
-        </button>
+        <Link href={"/produce/"}>
+          <button className="bg-[#87a96b] transition px-6 py-3 rounded-md text-sm font-medium cursor-pointer">
+            Explore our produce
+          </button>
+        </Link>
       </div>
     </section>
   );

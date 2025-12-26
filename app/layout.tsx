@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display } from "next/font/google";
-
+import { WishlistProvider } from "@/app/context/WishlistContext";
+import { CartProvider } from "./context/CartContext";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -24,7 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={playfair.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <CartProvider>
+          <WishlistProvider>{children}</WishlistProvider>
+        </CartProvider>
+      </body>
     </html>
   );
 }
